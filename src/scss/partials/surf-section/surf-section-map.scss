@@ -1,0 +1,77 @@
+.section-title::before {
+  content: 'surf';
+}
+
+.location-mark {
+  opacity: .03;
+  position: absolute;
+  @include pos(21rem, 0);
+  transform: translateX(50%);
+}
+
+&-subtitle {
+  margin-top: 5.4rem;
+
+  .title {
+    span {
+      @extend %thin;
+    }
+  }
+}
+
+.world-map {
+  @include size(120rem, 60rem);
+  background-image: url(../img/location-section/world-map-dots.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 5rem auto;
+  position: relative;
+
+  &-item {
+    @include size($maw: 28.3rem);
+    position: relative;
+    transform: translateX(-50%);
+
+    .dot,
+    .icon-drop {
+      @include pos($l: 50%);
+      transform: translateX(-50%);
+      position: absolute;
+      transition: all .2s ease;
+      cursor: pointer;
+    }
+
+    .dot {
+      @include create-dot(2.5rem, $cyan);
+      box-shadow: 0px 0px 35px rgba($cyan, 0.837777);
+    }
+
+    .icon-drop {
+      transform: scale(0) translate(-47%, -25%);
+      color: $cyan;
+      font-size: 3.3rem;
+    }
+
+    .info-block {
+      background-color: rgba($black, .7);
+      border-radius: 6px;
+      transition: opacity .5s ease;
+      opacity: 0;
+      border-radius: .6rem;
+      margin-bottom: 2rem;
+    }
+
+    &.active .icon-drop {
+      transform: scale(1) translate(-47%, -25%);
+    }
+
+    @import 'positions';
+
+  }
+
+  .map-location-mark {
+    position: absolute;
+    @include size(1.5rem);
+    @include pos(50%);
+  }
+}

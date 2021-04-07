@@ -1,0 +1,108 @@
+.shop-section {
+  .container {
+    padding-top: 10rem;
+    min-height: 97.3rem;
+
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+
+  .slider-nav {
+    top: 28rem;
+
+    a {
+      opacity: .5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .section-title {
+    &::before {
+      content: 'shop';
+    }
+  }
+
+  .shop-slide {
+    .offer {
+      @include size($maw: 48rem);
+      margin-top: 25rem;
+      padding-left: 13.3rem;
+
+      .title {
+        line-height: 1;
+        margin-top: 1rem;
+      }
+
+      .section-subtitle {
+        padding-left: 0;
+        margin-bottom: 4.7rem;
+      }
+
+      .stars {
+        max-width: 20rem;
+      }
+
+      .price {
+        @include font(bold, 3.2rem, (40/32));
+        margin-bottom: 8.4rem;
+
+        sup {
+          @include font(regular);
+          padding-left: .5rem;
+        }
+      }
+
+      .button {
+        .button-highlight-word::before {
+          width: 13rem;
+        }
+      }
+    }
+
+    .main-article {
+      @include pos(16.6rem + 10, $l:50%);
+      transform: translateX(-50%);
+      position: absolute;
+    }
+
+    .secondary-articles-box {
+      @include pos($b: 0, $r: 8.5rem);
+      position: absolute;
+
+      .secondary-articles-title {
+        @include font(bold, 2.8rem, (40/28), uppercase);
+        margin-bottom: 2.5rem;
+      }
+
+      .secondary-articles {
+        min-width: 34rem;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 1.3rem;
+
+        .article {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+
+          .title {
+            @include font(regular, 1.8rem, (22/18), uppercase) {
+              letter-spacing: 8px;
+              opacity: .5;
+              margin: 3.6rem 0 1.6rem 0;
+            }
+          }
+
+          .price {
+            @include font(bold, 1.9rem, normal);
+          }
+        }
+      }
+    }
+  }
+}

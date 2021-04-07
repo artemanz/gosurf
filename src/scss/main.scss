@@ -1,0 +1,24 @@
+/* === Libs === */
+@import 'libs';
+/* === Fonts === */
+@import 'assets/fonts';
+@import 'assets/iconfonts';
+/* --- Vars --- */
+@import 'assets/vars';
+/* --- Mixins --- */
+@import 'assets/mixins';
+/* --- Global --- */
+@import 'assets/global';
+
+
+@import 'partials/header';
+@import 'partials/hero/hero';
+
+@import 'partials/surf-section/surf-section';
+@import 'partials/travel-section/travel-section';
+@import 'partials/sleep-section/sleep-section';
+@import 'partials/shop-section/shop-section';
+
+@import 'partials/footer';
+/* === Media === */
+@import 'assets/media';

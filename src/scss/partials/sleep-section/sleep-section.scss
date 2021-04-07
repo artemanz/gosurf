@@ -1,0 +1,42 @@
+.sleep-section {
+  .container {
+    padding-top: 10rem;
+    height: 160rem;
+  }
+
+  .slider-nav {
+    top: 52rem;
+
+    a {
+      opacity: .5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .section-title {
+    margin-bottom: 9.2rem;
+
+    &::before {
+      content: 'sleep';
+    }
+  }
+
+  @import 'sleep-slider';
+
+  .button {
+    margin: 9rem 0 0 50%;
+    transform: translateX(-50%);
+
+    .button-highlight-word::before {
+      width: 17.5rem;
+    }
+  }
+
+  .frangipani-lg {
+    @include pos($b:0rem, $r:-14rem);
+    position: absolute;
+  }
+}

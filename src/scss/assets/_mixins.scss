@@ -1,0 +1,90 @@
+@mixin font($fw:null, $fz:null, $lh: null, $tt: null) {
+  @content;
+
+  @if $fz {
+    font-size: $fz;
+  }
+
+  @if($lh) {
+    line-height: $lh;
+  }
+
+  @if($tt) {
+    text-transform: $tt;
+  }
+
+  @if $fw {
+    @if($fw==bold) {
+      @extend %bold;
+    }
+
+    @if($fw==regular) {
+      @extend %regular;
+    }
+
+    @if($fw==light) {
+      @extend %light;
+    }
+
+    @if($fw==thin) {
+      @extend %thin;
+    }
+  }
+}
+
+@mixin size($w:null, $h: null,
+  $maw: null, $mah: null,
+  $miw: null, $mih: null) {
+  @if($w) {
+    width: $w;
+  }
+
+  @if($h) {
+    height: $h;
+  }
+
+  @if($maw) {
+    max-width: $maw;
+  }
+
+  @if($mah) {
+    max-height: $mah;
+  }
+
+  @if($miw) {
+    min-width: $miw;
+  }
+
+  @if($mih) {
+    min-height: $mih;
+  }
+}
+
+@mixin pos($t: null, $r: null,
+  $b: null, $l: null) {
+  @content;
+
+  @if ($t) {
+    top: $t;
+  }
+
+  @if ($r) {
+    right: $r;
+  }
+
+  @if ($b) {
+    bottom: $b;
+  }
+
+  @if ($l) {
+    left: $l;
+  }
+}
+
+@mixin create-dot($size, $color) {
+  width: $size;
+  height: $size;
+  background-color: $color;
+  border-radius: 50%;
+  @content;
+}
