@@ -1,4 +1,27 @@
 export default function sleepSlider() {
+  const rafSettings = {
+    start: null,
+    total: 500
+  }
+
+  function changeSum() {
+    let time;
+    let {
+      start,
+      total,
+      currentVal,
+      totalVal,
+      sum
+    } = rafSettings;
+    if (!start) 
+    start = rafSettings.start = new Date().getTime();
+    time = new Date().getTime();
+    const progress = (time - start) / total;
+    sum.textContent = Math.floor(currentVal + totalVal * progress);
+    if (progress < 1) requestAnimationFrame(changeSum);
+    else rafSettings.start = null;
+  }
+
   function changeValues(slide) {
     slide = slide.closest('.sleep-slider-slide');
     return function (e) {
@@ -6,7 +29,10 @@ export default function sleepSlider() {
         let sumVal = Math.floor(nums.nights * 2 * nums.guests * 30 / (nums.nights + nums.guests));
         nights.textContent = nums.nights;
         guests.textContent = nums.guests;
-        sum.textContent = sumVal;
+        rafSettings.currentVal = +sum.textContent || 0;
+        rafSettings.totalVal = sumVal - rafSettings.currentVal;
+        rafSettings.sum = sum;
+        changeSum(sum);
       }
 
       const nights = slide.querySelector('.nights-val');
