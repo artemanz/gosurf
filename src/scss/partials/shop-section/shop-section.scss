@@ -63,11 +63,7 @@
       }
     }
 
-    .main-article {
-      @include pos(16.6rem + 10, $l:50%);
-      transform: translateX(-50%);
-      position: absolute;
-    }
+    @import 'main-article';
 
     .secondary-articles-box {
       @include pos($b: 0, $r: 8.5rem);

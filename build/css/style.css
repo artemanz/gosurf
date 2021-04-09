@@ -4568,7 +4568,7 @@ template {
     content: ""
 }
 
-.section-title,.section-title::before,.section-subtitle .title,.info-block .info-title,.info-block-inner-item-title,.button-link,.header .go-surf,.header .logo,.header .logo .text,.hero-slider .slider-item-title,.hero-slider .slider-item-subtitle,.hero-sidebar .location .date .day,.surf-section .surf-slider-slide .inner-content .title,.travel-section .travel-slider .slider-list .item .title,.sleep-section .sleep-slider .slider-list .item .title,.shop-section .shop-slide .offer .price,.shop-section .shop-slide .secondary-articles-box .secondary-articles-title,.shop-section .shop-slide .secondary-articles-box .secondary-articles .article .price {
+.section-title,.section-title::before,.section-subtitle .title,.info-block .info-title,.info-block-inner-item-title,.button-link,.header .go-surf,.header .logo,.header .logo .text,.hero-slider .slider-item-title,.hero-slider .slider-item-subtitle,.hero-sidebar .location .date .day,.surf-section .surf-slider-slide .inner-content .title,.travel-section .travel-slider .slider-list .item .title,.sleep-section .sleep-slider .slider-list .item .title,.shop-section .shop-slide .offer .price,.shop-section .shop-slide .tooltip .tooltip-inner .text,.shop-section .shop-slide .secondary-articles-box .secondary-articles-title,.shop-section .shop-slide .secondary-articles-box .secondary-articles .article .price {
     font-family: 'Fira Sans Bold', sans-serif
 }
 
@@ -4677,7 +4677,7 @@ section .container {
 .decor-line-left,.decor-line-right {
     font-size: 2.2rem;
     text-transform: uppercase;
-    letter-spacing: 7.33333px;
+    letter-spacing: 7px;
     opacity: 0.5;
     padding-left: 10.3rem;
     position: relative;
@@ -5790,9 +5790,109 @@ section .container {
 .shop-section .shop-slide .main-article {
     top: 26.6rem;
     left: 50%;
+    position: absolute;
     -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.shop-section .shop-slide .tooltip {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.shop-section .shop-slide .tooltip .circle {
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer
+}
+
+.shop-section .shop-slide .tooltip .circle .line {
+    -webkit-transition: -webkit-transform .2s linear;
+    transition: -webkit-transform .2s linear;
+    transition: transform .2s linear;
+    transition: transform .2s linear, -webkit-transform .2s linear;
+    background-color: #4AF6CD;
     position: absolute
+}
+
+.shop-section .shop-slide .tooltip .circle .line:first-child {
+    width: 2rem;
+    height: .2rem;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%
+}
+
+.shop-section .shop-slide .tooltip .circle .line:last-child {
+    width: .2rem;
+    height: 2rem;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%
+}
+
+.shop-section .shop-slide .tooltip .tooltip-inner {
+    display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    min-width: 40rem;
+    margin-left: 5rem
+}
+
+.shop-section .shop-slide .tooltip .tooltip-inner .decor-line {
+    display: block;
+    width: 8rem;
+    height: 1px;
+    background-color: #fff;
+    opacity: .5;
+    margin-left: 1rem
+}
+
+.shop-section .shop-slide .tooltip .tooltip-inner .text {
+    font-size: 2.4rem;
+    line-height: normal;
+    text-transform: uppercase;
+    display: block;
+    margin-left: 1rem;
+    max-width: 25.5rem
+}
+
+.shop-section .shop-slide .tooltip:nth-child(1) {
+    top: 40.6rem;
+    left: 52%
+}
+
+.shop-section .shop-slide .tooltip:nth-child(2) {
+    top: 60rem;
+    left: 44%
+}
+
+.shop-section .shop-slide .tooltip:nth-child(3) {
+    top: 82rem;
+    left: 46%
+}
+
+.shop-section .shop-slide .tooltip.active .tooltip-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.shop-section .shop-slide .tooltip.active .circle .line:last-child {
+    -webkit-transform: translate(-50%, -50%) scaleY(0);
+    transform: translate(-50%, -50%) scaleY(0)
 }
 
 .shop-section .shop-slide .secondary-articles-box {

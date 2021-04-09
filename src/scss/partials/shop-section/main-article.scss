@@ -1,0 +1,95 @@
+.main-article {
+  @include pos(16.6rem + 10, $l:50%);
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.tooltip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+  .circle {
+    @include size(4rem, 4rem);
+    position: relative;
+    background-color: $white;
+    border-radius: 50%;
+    cursor: pointer;
+
+    .line {
+      transition: transform .2s linear;
+      background-color: $cyan;
+      position: absolute;
+
+      &:first-child {
+        @include size(2rem, .2rem);
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+      }
+
+      &:last-child {
+        @include size(.2rem, 2rem);
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+      }
+    }
+  }
+
+  .tooltip-inner {
+    display: none;
+    align-items: center;
+    position: absolute;
+    min-width: 40rem;
+    margin-left: 5rem;
+
+    .decor-line {
+      display: block;
+      width: 8rem;
+      height: 1px;
+      background-color: $white;
+      opacity: .5;
+      margin-left: 1rem;
+    }
+
+    .text {
+      @include font(bold, 2.4rem, normal, uppercase);
+      display: block;
+      margin-left: 1rem;
+      max-width: 25.5rem;
+    }
+  }
+}
+
+.tooltip {
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      @if $i==1 {
+        @include pos($t: 40.6rem, $l: 52%);
+      }
+
+      @if $i==2 {
+        @include pos($t: 60rem, $l: 44%);
+      }
+
+      @if $i==3 {
+        @include pos($t: 82rem, $l: 46%);
+      }
+    }
+  }
+
+  &.active {
+    .tooltip-inner {
+      display: flex;
+    }
+
+    .circle {
+      .line {
+        &:last-child {
+          transform: translate(-50%, -50%) scaleY(0);
+        }
+      }
+    }
+  }
+}

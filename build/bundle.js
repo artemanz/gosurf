@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/menu */ \"./src/js/modules/menu.js\");\n/* harmony import */ var _modules_heroSlider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/heroSlider */ \"./src/js/modules/heroSlider.js\");\n/* harmony import */ var _modules_surfSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/surfSlider */ \"./src/js/modules/surfSlider.js\");\n/* harmony import */ var _modules_travelSlider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/travelSlider */ \"./src/js/modules/travelSlider.js\");\n/* harmony import */ var _modules_locationMap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/locationMap */ \"./src/js/modules/locationMap.js\");\n/* harmony import */ var _modules_sleepSlider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/sleepSlider */ \"./src/js/modules/sleepSlider.js\");\n\n\n\n\n\n\ndocument.addEventListener('DOMContentLoaded', function () {\n  'use strict';\n\n  Object(_modules_menu__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  Object(_modules_heroSlider__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  Object(_modules_surfSlider__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n  Object(_modules_travelSlider__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n  Object(_modules_locationMap__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n  Object(_modules_sleepSlider__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/menu */ \"./src/js/modules/menu.js\");\n/* harmony import */ var _modules_heroSlider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/heroSlider */ \"./src/js/modules/heroSlider.js\");\n/* harmony import */ var _modules_surfSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/surfSlider */ \"./src/js/modules/surfSlider.js\");\n/* harmony import */ var _modules_travelSlider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/travelSlider */ \"./src/js/modules/travelSlider.js\");\n/* harmony import */ var _modules_locationMap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/locationMap */ \"./src/js/modules/locationMap.js\");\n/* harmony import */ var _modules_sleepSlider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/sleepSlider */ \"./src/js/modules/sleepSlider.js\");\n/* harmony import */ var _modules_shopSlider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/shopSlider */ \"./src/js/modules/shopSlider.js\");\n\n\n\n\n\n\n\ndocument.addEventListener('DOMContentLoaded', function () {\n  'use strict';\n\n  Object(_modules_menu__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  Object(_modules_heroSlider__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  Object(_modules_surfSlider__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n  Object(_modules_travelSlider__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n  Object(_modules_locationMap__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n  Object(_modules_sleepSlider__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n  Object(_modules_shopSlider__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
@@ -143,6 +143,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return menu; });\nfunction menu() {\n  var menu = document.querySelector('.menu');\n  menu.addEventListener('click', function (e) {\n    var target = e.target;\n    var newTarget = target.closest('.menu-list-item');\n\n    if (newTarget) {\n      e.preventDefault();\n      document.querySelector(newTarget.firstElementChild.hash).scrollIntoView({\n        behavior: 'smooth'\n      });\n    }\n  });\n}\n\n//# sourceURL=webpack:///./src/js/modules/menu.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/shopSlider.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/shopSlider.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return shop; });\nfunction shop() {\n  var showTolltips = function showTolltips(e) {\n    var target = e.target;\n\n    if (target.matches('.circle')) {\n      var tooltip = target.closest('.tooltip');\n      tooltip.classList.toggle('active');\n    }\n  };\n\n  $('.shop-section').on('click', showTolltips);\n  var triggers = document.querySelectorAll('.shop-section .tooltip .circle');\n}\n\n//# sourceURL=webpack:///./src/js/modules/shopSlider.js?");
 
 /***/ }),
 

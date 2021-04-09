@@ -97,7 +97,7 @@ section .container {
 .decor-line-left,
 .decor-line-right {
   @include font (light, 2.2rem, $tt:uppercase);
-  letter-spacing: 7.33333px;
+  letter-spacing: 7px;
 
   opacity: 0.5;
   padding-left: 10.3rem;
@@ -268,7 +268,7 @@ section .container {
   justify-content: space-between;
   align-items: center;
 
-  .star{
+  .star {
     margin-left: -2rem;
   }
 }
