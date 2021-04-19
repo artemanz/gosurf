@@ -29,7 +29,7 @@
         </div>
       </div>
     
-      <svg xmlns="http://www.w3.org/2000/svg" id="map" width="769" height="496" viewBox="0 0 769 496" fill="none">
+      <svg class="mobile-hide tablet-hide" xmlns="http://www.w3.org/2000/svg" id="map" width="769" height="496" viewBox="0 0 769 496" fill="none">
         <g opacity="0.29827">
         <path d="M34.8999 43.2164C22.8501 30.7421 9.75054 15.8946 1.5 -0.5H598.08L769 156.928V465.153C750.995 468.437 728.233 467.8 713.64 469.899C690.729 473.166 669.421 480.176 647.102 484.453C623.122 489.027 598.549 484.394 574.212 487.067C562.518 488.374 547.204 496.749 535.63 494.67C517.942 491.522 528.27 490.75 517.408 479.998C500.373 463.127 501.501 451.841 493.25 428.793C487.969 414.062 478.59 392.677 469.271 381.212C461.079 371.174 427.721 340.7 416.088 338.027C406.115 335.77 391.395 351.333 381.127 344.799C368.78 336.958 382.492 319.138 374.301 309.396C367.475 301.258 352.338 307.257 343.138 304.703C333.404 301.97 325.51 294.486 315.301 291.872C301.529 288.308 293.339 294.723 282.239 284.506C276.837 279.517 278.678 265.26 269.774 259.558C249.355 246.429 226.266 263.18 208.399 239.063C190.414 242.687 162.695 250.825 145.541 243.994C145.897 209.185 139.309 177.643 137.706 142.833C106.96 144.437 118.831 131.309 108.384 113.904C99.0056 98.282 78.8833 98.1037 67.0121 86.1638C60.0674 79.2142 62.3229 69.1155 56.506 61.3932C49.5016 52.1267 41.904 50.4634 34.8999 43.2164Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </g>
@@ -47,16 +47,23 @@
         <path class="animate__animated animate__fadeIn" fill-rule="evenodd" clip-rule="evenodd" d="M497.5 91C501.09 91 504 88.0899 504 84.5C504 80.9101 501.09 78 497.5 78C493.91 78 491 80.9101 491 84.5C491 88.0899 493.91 91 497.5 91Z" fill="#4AF6CD"/>
         </svg>
           <div class="map-location north">
-        <div class="map-location-box">
+        <div class="map-location-box mobile-hide tablet-hide">
           <div class="dot animate__animated animate__fadeIn"></div>
           <span id="map-total-location">North Shore | Malibu, CA</span>
         </div>
       </div>
-      <span id="map-current-location">Current Location</span>
+      <span id="map-current-location mobile-hide">Current Location</span>
     </header>
     <main> 
       <section class="hero-section">
-        <aside class="hero-sidebar">
+        <div class="burger-menu desktop-hide">
+          <div class="burger-menu-triangle"></div>
+          <div class="burger-menu-menu menu-btn">
+            <div class="menu-btn__burger"></div>
+          </div>
+        </div>
+      
+        <aside class="hero-sidebar mobile-hide tablet-hide">
           <nav class="menu">
             <ul class="menu-list">
               <li class="menu-list-item">
@@ -98,7 +105,7 @@
         
         <div class="scroll-down">
           <a class="scroll-down-arrows" href="#"></a>
-        </div>  <div class="slider-nav hero-slider-nav">
+        </div>  <div class="slider-nav hero-slider-nav wow animate__fadeInUp" data-wow-offset="300" data-wow-duration="1s">
           <a class="slider-item-link hero-slider-prev" href="">
             <img src="img/icons/arrow-left.svg" alt="right arrow">
           </a>
@@ -114,7 +121,7 @@
               <div class="slider-item-additional decor-line-left">CONDITION</div>
               <h2 class="slider-item-subtitle">RADICAL</h2>
         
-              <a class="slider-item-link hero-slider-next" href="">
+              <a class="slider-item-link hero-slider-next mobile-hide tablet-hide" href="">
                 <img src="img/icons/arrow-right.svg" alt="right arrow">
               </a>
             </div>
@@ -127,7 +134,7 @@
               <div class="slider-item-additional decor-line-left">CONDITION</div>
               <h2 class="slider-item-subtitle">RADICAL</h2>
         
-              <a class="slider-item-link hero-slider-next" href="">
+              <a class="slider-item-link hero-slider-next mobile-hide tablet-hide" href="">
                 <img src="img/icons/arrow-right.svg" alt="right arrow">
               </a>
             </div>
@@ -140,7 +147,7 @@
               <div class="slider-item-additional decor-line-left">CONDITION</div>
               <h2 class="slider-item-subtitle">RADICAL</h2>
         
-              <a class="slider-item-link hero-slider-next" href="">
+              <a class="slider-item-link hero-slider-next mobile-hide tablet-hide" href="">
                 <img src="img/icons/arrow-right.svg" alt="right arrow">
               </a>
             </div>
@@ -153,7 +160,7 @@
               <div class="slider-item-additional decor-line-left">CONDITION</div>
               <h2 class="slider-item-subtitle">RADICAL</h2>
         
-              <a class="slider-item-link hero-slider-next" href="">
+              <a class="slider-item-link hero-slider-next mobile-hide tablet-hide" href="">
                 <img src="img/icons/arrow-right.svg" alt="right arrow">
               </a>
             </div>
@@ -161,7 +168,7 @@
         </div>
         
         <!-- Hero slider preview -->
-        <div class="hero-slider-preview">
+        <div class="hero-slider-preview mobile-hide tablet-hide">
           <div class="hero-slider-preview-box">
             <div class="line"></div>
             <div class="content">
@@ -193,16 +200,10 @@
               <div class="header">East shore</div>
             </div>
           </div>
-        </div></section>
-      <section class="surf-section" id="surf-section">
+        </div></section>  <section class="surf-section" id="surf-section">
         <div class="container">
-          <h2 class="section-title surf-section-title">surf</h2>
-          <img class="location-mark" src="img/icons/surf-section-location-mark.svg" alt="">
-              <div class="section-subtitle location-subtitle">
-                <div class="decor-line-left">current location</div>
-                <h3 class="title">California <span>|</span> USA</h3>
-              </div>
-              <div class="world-map">
+          <h2 class="section-title surf-section-title wow animate__fadeInLeft" data-wow-offset="250" data-wow-duration="1s">surf</h2>
+              <div class="world-map tablet-hide wow animate__zoomIn" data-wow-duration="1s" data-wow-offset="300">
                 <div class="world-map-item">
                   <div class="dot"></div>
                   <div class="icon-drop"></div>
@@ -395,14 +396,14 @@
                       </div>
                     </div>
                   </div>      </div>
-              </div>    <div class="slider-nav surf-slider-nav">
+              </div>    <div class="slider-nav surf-slider-nav wow animate__fadeInUp" data-wow-offset="300" data-wow-duration="1s">
             <a class="slider-item-link surf-slider-prev" href="">
               <img src="img/icons/arrow-left.svg" alt="right arrow">
             </a>
             <a class="slider-item-link surf-slider-next" href="">
               <img src="img/icons/arrow-right.svg" alt="right arrow">
             </a>
-          </div><div class="surf-slider">
+          </div><div class="surf-slider wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="300">
             <div class="surf-slider-slide">
               <div class="inner-content">
                 <h3 class="title">Malibu<br>Beach</h3>
@@ -621,9 +622,9 @@
           </div>  </div>
       </section>  <section class="travel-section" id="travel-section">
         <div class="container">
-          <h2 class="section-title">travel</h2>
+          <h2 class="section-title wow animate__fadeInLeft" data-wow-offset="250" data-wow-duration="1s">travel</h2>
       
-          <div class="slider-nav travel-slider-nav">
+          <div class="slider-nav travel-slider-nav wow animate__fadeInUp" data-wow-offset="300" data-wow-duration="1s">
             <a class="slider-item-link travel-slider-prev" href="">
               <img src="img/icons/arrow-left.svg" alt="right arrow">
             </a>
@@ -634,33 +635,34 @@
           <div class="travel-slider">
             <div class="travel-slider-slide">
               <div class="slider-head" style="background-image: url(../img/travel-section/slide-1.jpg)">
-                <div class="section-subtitle travel-subtitle">
+                <div class="section-subtitle travel-subtitle wow animate__fadeInRight" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-left">shore</div>
                   <h3 class="title">airlie beach <span>|</span> australia</h3>
                 </div>
-                <div class="section-subtitle direction-left">
+                <div class="section-subtitle direction-left wow animate__fadeInLeft" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-right">airline</div>
                   <h3 class="title virgin">virgin australia</h3>
                 </div>
-                <img class="airplane" src="img/travel-section/airplane.png" alt="">
+                <img class="airplane wow animate__rotateInUpRight" data-wow-offset="250" data-wow-duration=".7s"
+                  src="img/travel-section/airplane.png" alt="">
               </div>
             
               <div class="slider-list">
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Destination</div>
                   <div class="title">Queensland
                     Australia</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Distance</div>
                   <div class="title">7,065 Miles</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Travel Time</div>
                   <div class="title">23 Hours <br>
                     5 Minutes</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Pricing</div>
                   <div class="title">$1,976 USD</div>
                   <span>Round Trip</span>
@@ -668,33 +670,34 @@
               </div>
             </div>      <div class="travel-slider-slide">
               <div class="slider-head" style="background-image: url(../img/travel-section/slide-1.jpg)">
-                <div class="section-subtitle travel-subtitle">
+                <div class="section-subtitle travel-subtitle wow animate__fadeInRight" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-left">shore</div>
                   <h3 class="title">airlie beach <span>|</span> australia</h3>
                 </div>
-                <div class="section-subtitle direction-left">
+                <div class="section-subtitle direction-left wow animate__fadeInLeft" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-right">airline</div>
                   <h3 class="title virgin">virgin australia</h3>
                 </div>
-                <img class="airplane" src="img/travel-section/airplane.png" alt="">
+                <img class="airplane wow animate__rotateInUpRight" data-wow-offset="250" data-wow-duration=".7s"
+                  src="img/travel-section/airplane.png" alt="">
               </div>
             
               <div class="slider-list">
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Destination</div>
                   <div class="title">Queensland
                     Australia</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Distance</div>
                   <div class="title">7,065 Miles</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Travel Time</div>
                   <div class="title">23 Hours <br>
                     5 Minutes</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Pricing</div>
                   <div class="title">$1,976 USD</div>
                   <span>Round Trip</span>
@@ -702,33 +705,34 @@
               </div>
             </div>      <div class="travel-slider-slide">
               <div class="slider-head" style="background-image: url(../img/travel-section/slide-1.jpg)">
-                <div class="section-subtitle travel-subtitle">
+                <div class="section-subtitle travel-subtitle wow animate__fadeInRight" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-left">shore</div>
                   <h3 class="title">airlie beach <span>|</span> australia</h3>
                 </div>
-                <div class="section-subtitle direction-left">
+                <div class="section-subtitle direction-left wow animate__fadeInLeft" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-right">airline</div>
                   <h3 class="title virgin">virgin australia</h3>
                 </div>
-                <img class="airplane" src="img/travel-section/airplane.png" alt="">
+                <img class="airplane wow animate__rotateInUpRight" data-wow-offset="250" data-wow-duration=".7s"
+                  src="img/travel-section/airplane.png" alt="">
               </div>
             
               <div class="slider-list">
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Destination</div>
                   <div class="title">Queensland
                     Australia</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Distance</div>
                   <div class="title">7,065 Miles</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Travel Time</div>
                   <div class="title">23 Hours <br>
                     5 Minutes</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Pricing</div>
                   <div class="title">$1,976 USD</div>
                   <span>Round Trip</span>
@@ -736,33 +740,34 @@
               </div>
             </div>      <div class="travel-slider-slide">
               <div class="slider-head" style="background-image: url(../img/travel-section/slide-1.jpg)">
-                <div class="section-subtitle travel-subtitle">
+                <div class="section-subtitle travel-subtitle wow animate__fadeInRight" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-left">shore</div>
                   <h3 class="title">airlie beach <span>|</span> australia</h3>
                 </div>
-                <div class="section-subtitle direction-left">
+                <div class="section-subtitle direction-left wow animate__fadeInLeft" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-right">airline</div>
                   <h3 class="title virgin">virgin australia</h3>
                 </div>
-                <img class="airplane" src="img/travel-section/airplane.png" alt="">
+                <img class="airplane wow animate__rotateInUpRight" data-wow-offset="250" data-wow-duration=".7s"
+                  src="img/travel-section/airplane.png" alt="">
               </div>
             
               <div class="slider-list">
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Destination</div>
                   <div class="title">Queensland
                     Australia</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Distance</div>
                   <div class="title">7,065 Miles</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Travel Time</div>
                   <div class="title">23 Hours <br>
                     5 Minutes</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Pricing</div>
                   <div class="title">$1,976 USD</div>
                   <span>Round Trip</span>
@@ -770,33 +775,34 @@
               </div>
             </div>      <div class="travel-slider-slide">
               <div class="slider-head" style="background-image: url(../img/travel-section/slide-1.jpg)">
-                <div class="section-subtitle travel-subtitle">
+                <div class="section-subtitle travel-subtitle wow animate__fadeInRight" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-left">shore</div>
                   <h3 class="title">airlie beach <span>|</span> australia</h3>
                 </div>
-                <div class="section-subtitle direction-left">
+                <div class="section-subtitle direction-left wow animate__fadeInLeft" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-right">airline</div>
                   <h3 class="title virgin">virgin australia</h3>
                 </div>
-                <img class="airplane" src="img/travel-section/airplane.png" alt="">
+                <img class="airplane wow animate__rotateInUpRight" data-wow-offset="250" data-wow-duration=".7s"
+                  src="img/travel-section/airplane.png" alt="">
               </div>
             
               <div class="slider-list">
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Destination</div>
                   <div class="title">Queensland
                     Australia</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Distance</div>
                   <div class="title">7,065 Miles</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Travel Time</div>
                   <div class="title">23 Hours <br>
                     5 Minutes</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Pricing</div>
                   <div class="title">$1,976 USD</div>
                   <span>Round Trip</span>
@@ -804,33 +810,34 @@
               </div>
             </div>      <div class="travel-slider-slide">
               <div class="slider-head" style="background-image: url(../img/travel-section/slide-1.jpg)">
-                <div class="section-subtitle travel-subtitle">
+                <div class="section-subtitle travel-subtitle wow animate__fadeInRight" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-left">shore</div>
                   <h3 class="title">airlie beach <span>|</span> australia</h3>
                 </div>
-                <div class="section-subtitle direction-left">
+                <div class="section-subtitle direction-left wow animate__fadeInLeft" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-right">airline</div>
                   <h3 class="title virgin">virgin australia</h3>
                 </div>
-                <img class="airplane" src="img/travel-section/airplane.png" alt="">
+                <img class="airplane wow animate__rotateInUpRight" data-wow-offset="250" data-wow-duration=".7s"
+                  src="img/travel-section/airplane.png" alt="">
               </div>
             
               <div class="slider-list">
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Destination</div>
                   <div class="title">Queensland
                     Australia</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Distance</div>
                   <div class="title">7,065 Miles</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Travel Time</div>
                   <div class="title">23 Hours <br>
                     5 Minutes</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Pricing</div>
                   <div class="title">$1,976 USD</div>
                   <span>Round Trip</span>
@@ -838,33 +845,34 @@
               </div>
             </div>      <div class="travel-slider-slide">
               <div class="slider-head" style="background-image: url(../img/travel-section/slide-1.jpg)">
-                <div class="section-subtitle travel-subtitle">
+                <div class="section-subtitle travel-subtitle wow animate__fadeInRight" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-left">shore</div>
                   <h3 class="title">airlie beach <span>|</span> australia</h3>
                 </div>
-                <div class="section-subtitle direction-left">
+                <div class="section-subtitle direction-left wow animate__fadeInLeft" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-right">airline</div>
                   <h3 class="title virgin">virgin australia</h3>
                 </div>
-                <img class="airplane" src="img/travel-section/airplane.png" alt="">
+                <img class="airplane wow animate__rotateInUpRight" data-wow-offset="250" data-wow-duration=".7s"
+                  src="img/travel-section/airplane.png" alt="">
               </div>
             
               <div class="slider-list">
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Destination</div>
                   <div class="title">Queensland
                     Australia</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Distance</div>
                   <div class="title">7,065 Miles</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Travel Time</div>
                   <div class="title">23 Hours <br>
                     5 Minutes</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Pricing</div>
                   <div class="title">$1,976 USD</div>
                   <span>Round Trip</span>
@@ -872,33 +880,34 @@
               </div>
             </div>      <div class="travel-slider-slide">
               <div class="slider-head" style="background-image: url(../img/travel-section/slide-1.jpg)">
-                <div class="section-subtitle travel-subtitle">
+                <div class="section-subtitle travel-subtitle wow animate__fadeInRight" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-left">shore</div>
                   <h3 class="title">airlie beach <span>|</span> australia</h3>
                 </div>
-                <div class="section-subtitle direction-left">
+                <div class="section-subtitle direction-left wow animate__fadeInLeft" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-right">airline</div>
                   <h3 class="title virgin">virgin australia</h3>
                 </div>
-                <img class="airplane" src="img/travel-section/airplane.png" alt="">
+                <img class="airplane wow animate__rotateInUpRight" data-wow-offset="250" data-wow-duration=".7s"
+                  src="img/travel-section/airplane.png" alt="">
               </div>
             
               <div class="slider-list">
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Destination</div>
                   <div class="title">Queensland
                     Australia</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Distance</div>
                   <div class="title">7,065 Miles</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Travel Time</div>
                   <div class="title">23 Hours <br>
                     5 Minutes</div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Pricing</div>
                   <div class="title">$1,976 USD</div>
                   <span>Round Trip</span>
@@ -915,9 +924,9 @@
         </div>
       </section>  <section class="sleep-section" id="sleep-section">
         <div class="container">
-          <h2 class="section-title">sleep</h2>
+          <h2 class="section-title wow animate__fadeInLeft" data-wow-offset="250" data-wow-duration="1s">sleep</h2>
       
-          <div class="slider-nav sleep-slider-nav">
+          <div class="slider-nav sleep-slider-nav wow animate__fadeInUp" data-wow-offset="300" data-wow-duration="1s">
             <a class="slider-item-link sleep-slider-prev" href="">
               <img src="img/icons/arrow-left.svg" alt="right arrow">
             </a>
@@ -928,11 +937,11 @@
           <div class="sleep-slider">
             <div class="sleep-slider-slide">
               <div class="slider-head" style="background-image: url(../img/sleep-section/slide-1.png)">
-                <div class="section-subtitle sleep-subtitle">
+                <div class="section-subtitle sleep-subtitle wow animate__fadeInRight" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-left">shore</div>
                   <h3 class="title">auberge <span>|</span> australia</h3>
                 </div>
-                <div class="section-subtitle direction-left">
+                <div class="section-subtitle direction-left wow animate__fadeInLeft" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-right">rating</div>
                   <div class="rating">
                     <h3 class="title virgin">excellent</h3>
@@ -949,12 +958,12 @@
               </div>
             
               <div class="slider-list">
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">resort</div>
                   <div class="title">auberge
                     Australia</div>
                 </div>
-                <div class="item nights">
+                <div class="item nights wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description"># of Nights</div>
                   <div class="title letsp"><span class="nights-val">1</span> Nights</div>
                   <div class="calc-btns">
@@ -962,7 +971,7 @@
                     <span class="plus nights-plus">+</span>
                   </div>
                 </div>
-                <div class="item guests">
+                <div class="item guests wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description"># of Guests</div>
                   <div class="title letsp"><span class="guests-val">1</span> Guests</div>
                   <div class="calc-btns">
@@ -970,7 +979,7 @@
                     <span class="plus guests-plus">+</span>
                   </div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Pricing</div>
                   <div class="title">$<span class="sleep-sum">15</span> USD</div>
                   <span class="item-span">Per Night</span>
@@ -978,11 +987,11 @@
               </div>
             </div>      <div class="sleep-slider-slide">
               <div class="slider-head" style="background-image: url(../img/sleep-section/slide-1.png)">
-                <div class="section-subtitle sleep-subtitle">
+                <div class="section-subtitle sleep-subtitle wow animate__fadeInRight" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-left">shore</div>
                   <h3 class="title">auberge <span>|</span> australia</h3>
                 </div>
-                <div class="section-subtitle direction-left">
+                <div class="section-subtitle direction-left wow animate__fadeInLeft" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-right">rating</div>
                   <div class="rating">
                     <h3 class="title virgin">excellent</h3>
@@ -999,12 +1008,12 @@
               </div>
             
               <div class="slider-list">
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">resort</div>
                   <div class="title">auberge
                     Australia</div>
                 </div>
-                <div class="item nights">
+                <div class="item nights wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description"># of Nights</div>
                   <div class="title letsp"><span class="nights-val">1</span> Nights</div>
                   <div class="calc-btns">
@@ -1012,7 +1021,7 @@
                     <span class="plus nights-plus">+</span>
                   </div>
                 </div>
-                <div class="item guests">
+                <div class="item guests wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description"># of Guests</div>
                   <div class="title letsp"><span class="guests-val">1</span> Guests</div>
                   <div class="calc-btns">
@@ -1020,7 +1029,7 @@
                     <span class="plus guests-plus">+</span>
                   </div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Pricing</div>
                   <div class="title">$<span class="sleep-sum">15</span> USD</div>
                   <span class="item-span">Per Night</span>
@@ -1028,11 +1037,11 @@
               </div>
             </div>      <div class="sleep-slider-slide">
               <div class="slider-head" style="background-image: url(../img/sleep-section/slide-1.png)">
-                <div class="section-subtitle sleep-subtitle">
+                <div class="section-subtitle sleep-subtitle wow animate__fadeInRight" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-left">shore</div>
                   <h3 class="title">auberge <span>|</span> australia</h3>
                 </div>
-                <div class="section-subtitle direction-left">
+                <div class="section-subtitle direction-left wow animate__fadeInLeft" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-right">rating</div>
                   <div class="rating">
                     <h3 class="title virgin">excellent</h3>
@@ -1049,12 +1058,12 @@
               </div>
             
               <div class="slider-list">
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">resort</div>
                   <div class="title">auberge
                     Australia</div>
                 </div>
-                <div class="item nights">
+                <div class="item nights wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description"># of Nights</div>
                   <div class="title letsp"><span class="nights-val">1</span> Nights</div>
                   <div class="calc-btns">
@@ -1062,7 +1071,7 @@
                     <span class="plus nights-plus">+</span>
                   </div>
                 </div>
-                <div class="item guests">
+                <div class="item guests wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description"># of Guests</div>
                   <div class="title letsp"><span class="guests-val">1</span> Guests</div>
                   <div class="calc-btns">
@@ -1070,7 +1079,7 @@
                     <span class="plus guests-plus">+</span>
                   </div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Pricing</div>
                   <div class="title">$<span class="sleep-sum">15</span> USD</div>
                   <span class="item-span">Per Night</span>
@@ -1078,11 +1087,11 @@
               </div>
             </div>      <div class="sleep-slider-slide">
               <div class="slider-head" style="background-image: url(../img/sleep-section/slide-1.png)">
-                <div class="section-subtitle sleep-subtitle">
+                <div class="section-subtitle sleep-subtitle wow animate__fadeInRight" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-left">shore</div>
                   <h3 class="title">auberge <span>|</span> australia</h3>
                 </div>
-                <div class="section-subtitle direction-left">
+                <div class="section-subtitle direction-left wow animate__fadeInLeft" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-right">rating</div>
                   <div class="rating">
                     <h3 class="title virgin">excellent</h3>
@@ -1099,12 +1108,12 @@
               </div>
             
               <div class="slider-list">
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">resort</div>
                   <div class="title">auberge
                     Australia</div>
                 </div>
-                <div class="item nights">
+                <div class="item nights wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description"># of Nights</div>
                   <div class="title letsp"><span class="nights-val">1</span> Nights</div>
                   <div class="calc-btns">
@@ -1112,7 +1121,7 @@
                     <span class="plus nights-plus">+</span>
                   </div>
                 </div>
-                <div class="item guests">
+                <div class="item guests wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description"># of Guests</div>
                   <div class="title letsp"><span class="guests-val">1</span> Guests</div>
                   <div class="calc-btns">
@@ -1120,7 +1129,7 @@
                     <span class="plus guests-plus">+</span>
                   </div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Pricing</div>
                   <div class="title">$<span class="sleep-sum">15</span> USD</div>
                   <span class="item-span">Per Night</span>
@@ -1128,11 +1137,11 @@
               </div>
             </div>      <div class="sleep-slider-slide">
               <div class="slider-head" style="background-image: url(../img/sleep-section/slide-1.png)">
-                <div class="section-subtitle sleep-subtitle">
+                <div class="section-subtitle sleep-subtitle wow animate__fadeInRight" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-left">shore</div>
                   <h3 class="title">auberge <span>|</span> australia</h3>
                 </div>
-                <div class="section-subtitle direction-left">
+                <div class="section-subtitle direction-left wow animate__fadeInLeft" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-right">rating</div>
                   <div class="rating">
                     <h3 class="title virgin">excellent</h3>
@@ -1149,12 +1158,12 @@
               </div>
             
               <div class="slider-list">
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">resort</div>
                   <div class="title">auberge
                     Australia</div>
                 </div>
-                <div class="item nights">
+                <div class="item nights wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description"># of Nights</div>
                   <div class="title letsp"><span class="nights-val">1</span> Nights</div>
                   <div class="calc-btns">
@@ -1162,7 +1171,7 @@
                     <span class="plus nights-plus">+</span>
                   </div>
                 </div>
-                <div class="item guests">
+                <div class="item guests wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description"># of Guests</div>
                   <div class="title letsp"><span class="guests-val">1</span> Guests</div>
                   <div class="calc-btns">
@@ -1170,7 +1179,7 @@
                     <span class="plus guests-plus">+</span>
                   </div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Pricing</div>
                   <div class="title">$<span class="sleep-sum">15</span> USD</div>
                   <span class="item-span">Per Night</span>
@@ -1178,11 +1187,11 @@
               </div>
             </div>      <div class="sleep-slider-slide">
               <div class="slider-head" style="background-image: url(../img/sleep-section/slide-1.png)">
-                <div class="section-subtitle sleep-subtitle">
+                <div class="section-subtitle sleep-subtitle wow animate__fadeInRight" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-left">shore</div>
                   <h3 class="title">auberge <span>|</span> australia</h3>
                 </div>
-                <div class="section-subtitle direction-left">
+                <div class="section-subtitle direction-left wow animate__fadeInLeft" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-right">rating</div>
                   <div class="rating">
                     <h3 class="title virgin">excellent</h3>
@@ -1199,12 +1208,12 @@
               </div>
             
               <div class="slider-list">
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">resort</div>
                   <div class="title">auberge
                     Australia</div>
                 </div>
-                <div class="item nights">
+                <div class="item nights wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description"># of Nights</div>
                   <div class="title letsp"><span class="nights-val">1</span> Nights</div>
                   <div class="calc-btns">
@@ -1212,7 +1221,7 @@
                     <span class="plus nights-plus">+</span>
                   </div>
                 </div>
-                <div class="item guests">
+                <div class="item guests wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description"># of Guests</div>
                   <div class="title letsp"><span class="guests-val">1</span> Guests</div>
                   <div class="calc-btns">
@@ -1220,7 +1229,7 @@
                     <span class="plus guests-plus">+</span>
                   </div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Pricing</div>
                   <div class="title">$<span class="sleep-sum">15</span> USD</div>
                   <span class="item-span">Per Night</span>
@@ -1228,11 +1237,11 @@
               </div>
             </div>      <div class="sleep-slider-slide">
               <div class="slider-head" style="background-image: url(../img/sleep-section/slide-1.png)">
-                <div class="section-subtitle sleep-subtitle">
+                <div class="section-subtitle sleep-subtitle wow animate__fadeInRight" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-left">shore</div>
                   <h3 class="title">auberge <span>|</span> australia</h3>
                 </div>
-                <div class="section-subtitle direction-left">
+                <div class="section-subtitle direction-left wow animate__fadeInLeft" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-right">rating</div>
                   <div class="rating">
                     <h3 class="title virgin">excellent</h3>
@@ -1249,12 +1258,12 @@
               </div>
             
               <div class="slider-list">
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">resort</div>
                   <div class="title">auberge
                     Australia</div>
                 </div>
-                <div class="item nights">
+                <div class="item nights wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description"># of Nights</div>
                   <div class="title letsp"><span class="nights-val">1</span> Nights</div>
                   <div class="calc-btns">
@@ -1262,7 +1271,7 @@
                     <span class="plus nights-plus">+</span>
                   </div>
                 </div>
-                <div class="item guests">
+                <div class="item guests wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description"># of Guests</div>
                   <div class="title letsp"><span class="guests-val">1</span> Guests</div>
                   <div class="calc-btns">
@@ -1270,7 +1279,7 @@
                     <span class="plus guests-plus">+</span>
                   </div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Pricing</div>
                   <div class="title">$<span class="sleep-sum">15</span> USD</div>
                   <span class="item-span">Per Night</span>
@@ -1278,11 +1287,11 @@
               </div>
             </div>      <div class="sleep-slider-slide">
               <div class="slider-head" style="background-image: url(../img/sleep-section/slide-1.png)">
-                <div class="section-subtitle sleep-subtitle">
+                <div class="section-subtitle sleep-subtitle wow animate__fadeInRight" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-left">shore</div>
                   <h3 class="title">auberge <span>|</span> australia</h3>
                 </div>
-                <div class="section-subtitle direction-left">
+                <div class="section-subtitle direction-left wow animate__fadeInLeft" data-wow-offset="200" data-wow-duration="1s">
                   <div class="decor-line-right">rating</div>
                   <div class="rating">
                     <h3 class="title virgin">excellent</h3>
@@ -1299,12 +1308,12 @@
               </div>
             
               <div class="slider-list">
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">resort</div>
                   <div class="title">auberge
                     Australia</div>
                 </div>
-                <div class="item nights">
+                <div class="item nights wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description"># of Nights</div>
                   <div class="title letsp"><span class="nights-val">1</span> Nights</div>
                   <div class="calc-btns">
@@ -1312,7 +1321,7 @@
                     <span class="plus nights-plus">+</span>
                   </div>
                 </div>
-                <div class="item guests">
+                <div class="item guests wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description"># of Guests</div>
                   <div class="title letsp"><span class="guests-val">1</span> Guests</div>
                   <div class="calc-btns">
@@ -1320,7 +1329,7 @@
                     <span class="plus guests-plus">+</span>
                   </div>
                 </div>
-                <div class="item">
+                <div class="item wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="0">
                   <div class="description">Pricing</div>
                   <div class="title">$<span class="sleep-sum">15</span> USD</div>
                   <span class="item-span">Per Night</span>
@@ -1337,10 +1346,10 @@
         </div>
       </section>  <section class="shop-section" id="shop-section">
         <div class="container" style="background-image: url(img/shop-section/slider-background.png)">
-          <div class="section-title">shop</div>
+          <div class="section-title wow animate__fadeInLeft" data-wow-duration="1s" data-wow-offset="200">shop</div>
           <div class="shop-slider">
             <div class="shop-slide">
-              <div class="offer">
+              <div class="offer wow animate__fadeInLeft" data-wow-duration="1s" data-wow-offset="200">
                 <div class="section-subtitle direction-left">
                   <div class="decor-line-right">Style</div>
                   <h3 class="title">North Nugget TT <br>
@@ -1373,7 +1382,7 @@
                       <span class="line"></span>
                       <span class="line"></span>
                     </div>
-                    <div class="tooltip-inner">
+                    <div class="tooltip-inner animate__fadeInRight">
                       <span class="decor-line"></span>
                       <span class="text">Double Concave with
                         Vee Shape low point</span>
@@ -1384,7 +1393,7 @@
                       <span class="line"></span>
                       <span class="line"></span>
                     </div>
-                    <div class="tooltip-inner">
+                    <div class="tooltip-inner animate__fadeInRight">
                       <span class="decor-line"></span>
                       <span class="text">Double Concave with
                         Vee Shape low point</span>
@@ -1395,7 +1404,7 @@
                       <span class="line"></span>
                       <span class="line"></span>
                     </div>
-                    <div class="tooltip-inner">
+                    <div class="tooltip-inner animate__fadeInRight">
                       <span class="decor-line"></span>
                       <span class="text">Double Concave with
                         Vee Shape low point</span>
@@ -1421,7 +1430,37 @@
               </div>
             </div>    </div>
         </div>
-      </section></main>
+      </section>
+      <div class="menu-popup desktop-hide">
+        <nav class="menu-popup-nav">
+          <ul class="menu-popup-list">
+            <li class="menu-popup-item">
+              <a href="#surf-section" class="menu-popup-link">
+                <span class="menu-popup-icon icon-surf"></span>
+                Surf
+              </a>
+            </li>
+            <li class="menu-popup-item">
+              <a href="#travel-section" class="menu-popup-link">
+                <span class="menu-popup-icon icon-travel"></span>
+                Travel
+              </a>
+            </li>
+            <li class="menu-popup-item">
+              <a href="#sleep-section" class="menu-popup-link">
+                <span class="menu-popup-icon icon-camp"></span>
+                Sleep
+              </a>
+            </li>
+            <li class="menu-popup-item">
+              <a href="#shop-section" class="menu-popup-link">
+                <span class="menu-popup-icon icon-surfboard"></span>
+                Shop
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div></main>
     <footer class="footer">
       <div class="button">
         <a href="#" class="button-link">
